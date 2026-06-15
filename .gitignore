@@ -1,0 +1,20 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Dependencies & build output
+node_modules/
+dist/
+*.local
+
+# TypeScript build artifacts (emitted by `tsc -b`)
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+
+# Deploy artifacts
+.vercel
+.netlify
