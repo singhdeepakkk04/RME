@@ -1,0 +1,6 @@
+# Cloudflare Pages configuration for the RME landing site.
+# Static Vite build; `pages_build_output_dir` tells Cloudflare where the
+# compiled site lands so `wrangler pages deploy` and Pages CI both work.
+name = "rme"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "dist"
