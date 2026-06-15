@@ -1,2 +1,0 @@
-# Serve the single-page app for any path (Cloudflare Pages reads this from root).
-/*    /index.html   200

@@ -1,6 +1,13 @@
-# Cloudflare Pages configuration for the RME landing site.
-# Static Vite build; `pages_build_output_dir` tells Cloudflare where the
-# compiled site lands so `wrangler pages deploy` and Pages CI both work.
+# Cloudflare Workers static-assets deployment for the RME landing site.
+#
+# Cloudflare's build runs `wrangler deploy`, so this configures a Worker that
+# serves the compiled static site directly from ./dist. No Worker script is
+# needed: with an [assets] directory and no `main`, Cloudflare serves the
+# assets natively.
 name = "rme"
 compatibility_date = "2025-01-01"
-pages_build_output_dir = "dist"
+
+[assets]
+directory = "./dist"
+# Serve index.html for unknown paths so the single-page app always resolves.
+not_found_handling = "single-page-application"
